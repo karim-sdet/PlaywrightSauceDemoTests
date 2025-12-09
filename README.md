@@ -1,29 +1,20 @@
 # PlaywrightSauceDemoTests
 
-Playwright UI tests in C#/.NET 8 for the public [SauceDemo](https://www.saucedemo.com/) web app.
+C# .NET 8 UI test automation project using Microsoft Playwright against the public SauceDemo web app.
 
 ## Tech Stack
-
 - C# / .NET 8
 - Playwright for .NET
 - NUnit
 
 ## Scenarios Covered
-
-- Valid login: `standard_user` → navigates to the products page.
-- Invalid login: shows an error message for wrong credentials.
-- Add to cart: adds an item and verifies the cart badge shows `1`.
-
-## Project Structure
-
-- `SauceDemoPlaywrightTests` test class with async NUnit tests.
-- `SetUp` / `TearDown` use Playwright `IBrowser` and `IPage` to manage browser lifecycle.
-- Tests use Playwright locators + `Expect` assertions for verification.
+- Valid login – navigates to products page
+- Invalid login – shows error message
+- Add to cart – adds an item and verifies cart badge = 1
 
 ## How to Run
+- `dotnet restore`
+- `dotnet test`
 
-1. Install .NET 8 SDK.
-2. Clone the repo:
-   ```bash
-   git clone https://github.com/karim-sdet/PlaywrightSauceDemoTests.git
-   cd PlaywrightSauceDemoTests
+## Why I built this
+I created this project to practise Playwright with C# as part of my SDET preparation and to complement my Selenium/POM and API testing projects.
